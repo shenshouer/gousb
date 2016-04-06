@@ -21,7 +21,7 @@ type Descriptor struct {
 	// Bus information
 	Bus     uint8 // The bus on which the device was detected
 	Address uint8 // The address of the device on the bus
-
+	SNIndex uint8
 	// Version information
 	Spec   BCD // USB Specification Release Number
 	Device BCD // The device version
@@ -66,6 +66,7 @@ func newDescriptor(dev *C.libusb_device) (*Descriptor, error) {
 		Class:    uint8(desc.bDeviceClass),
 		SubClass: uint8(desc.bDeviceSubClass),
 		Protocol: uint8(desc.bDeviceProtocol),
+		SNIndex:  uint8(desc.iSerialNumber),
 		Configs:  cfgs,
 	}, nil
 }

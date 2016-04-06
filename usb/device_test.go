@@ -17,7 +17,7 @@ package usb_test
 import (
 	"testing"
 
-	. "github.com/kylelemons/gousb/usb"
+	. "gousb/usb"
 )
 
 func TestGetStringDescriptorAscii(t *testing.T) {
@@ -44,7 +44,11 @@ func TestGetStringDescriptorAscii(t *testing.T) {
 			t.Fatalf("%s", err.Error())
 		}
 
-		t.Logf("%d: %s %s\n", i, str, str2)
+		str3, err := d.GetStringDescriptor(int(d.SNIndex))
+		if err != nil{
+			t.Errorf("%s", err.Error())
+		}
+		t.Logf("%d: %s %s %s\n", i, str, str2, str3)
 		d.Close()
 	}
 }

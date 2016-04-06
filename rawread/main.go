@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/kylelemons/gousb/usb"
-	"github.com/kylelemons/gousb/usbid"
+	"gousb/usb"
+	"gousb/usbid"
 )
 
 var (
