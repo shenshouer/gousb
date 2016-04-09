@@ -17,7 +17,7 @@ package usb_test
 import (
 	"testing"
 
-	. "gousb/usb"
+	. "github.com/shenshouer/gousb/usb"
 )
 
 func TestGetStringDescriptorAscii(t *testing.T) {

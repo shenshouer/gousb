@@ -24,7 +24,7 @@ import (
 	"text/template"
 	"time"
 
-	"gousb/usbid"
+	"github.com/shenshouer/gousb/usbid"
 )
 
 var (

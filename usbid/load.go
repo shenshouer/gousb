@@ -20,7 +20,7 @@ import (
 	"strings"
 	"time"
 
-	"gousb/usb"
+	"github.com/shenshouer/gousb/usb"
 )
 
 const (
